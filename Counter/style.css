@@ -46,6 +46,7 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .counter-card .buttons .btn i{
