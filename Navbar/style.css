@@ -27,6 +27,7 @@ a{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    padding: 0 20px;
 }
 
 .container ul{
@@ -54,5 +55,59 @@ a{
 
 .navbars{
     display: none;
+}
+
+@media screen and (max-width: 640px) {
+    .container ul.social-icons{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .navbar{
+        height: 50px;
+    }
+    .container ul.middle-nav{
+        position: fixed;
+        top: 51px;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        background-color: #fff;
+        transform: translateX(100%) scaleY(0);
+        transition: 0.3s ease-in-out;
+    }
+
+    .container ul.middle-nav.active{
+        transform: translateX(0) scaleY(1);
+    }
+
+    .container ul.middle-nav li{
+        padding: 20px;
+    }
+
+    .navbars{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        transition: 0.3s ease-in-out;
+    }
+
+    .navbar i{
+        cursor: pointer;
+    }
+
+    .navbars .fa-times{
+        display: none;
+    }
+
+    .navbars.active .fa-times{
+        display: inline-block;
+    }
+
+    .navbars.active .fa-bars{
+        display: none;
+    }
 }
 
